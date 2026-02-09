@@ -1,6 +1,8 @@
 /* Reset */
 * {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -18,7 +20,7 @@ body {
 /* Calculator shell */
 .calculator {
    width: 100%;
-  max-width: 520px;   /* 👈 width bada */
+  max-width: 800px;
   padding: 28px; 
   border-radius: 22px;
   background: linear-gradient(180deg, #0b1220, #020617);
@@ -70,7 +72,7 @@ body {
 /* Buttons grid */
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(80px, 1fr));
   gap: 16px;
 }
 
@@ -94,7 +96,7 @@ button {
 
 /* Press animation (REAL feel) */
 button:active {
-  transform: translateY(2px) scale(0.98);
+  transform:  translateY(2px);
   box-shadow:
     0 2px 6px rgba(0, 0, 0, 0.9),
     inset 0 2px 6px rgba(0, 0, 0, 0.9);
